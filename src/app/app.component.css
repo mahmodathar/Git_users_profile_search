@@ -1,0 +1,16 @@
+.navbar-brand img{
+    width:50px;
+    float: left;
+    margin-right: 5px;
+}
+.navbar-brand h2, .navbar-brand span{
+    color:#fff;
+    float: left;
+    padding-top: 6px;
+    font-size: 30px;
+}
+.navbar-brand span{
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-family: monospace;
+}

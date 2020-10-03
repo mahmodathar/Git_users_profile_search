@@ -1,0 +1,36 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;;">Github User Profile Search</h4>
+                </div>
+                <div class="card-body light">
+                    <form class="form-inline" (submit)="searchUser()">
+                        <div class="form-group">
+                            <input [(ngModel)]="githubUserQuery" name="user" size="50" type="text" class="form-control" placeholder="Github user search">
+                        </div>
+                      
+                        <div class="ml-1">
+                            <input type="submit" value="SEARCH" class="btn btn-sm text-white primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+         <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+        </div>
+    </div>
+</div>

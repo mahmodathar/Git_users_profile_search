@@ -1,0 +1,15 @@
+<div *ngIf="githubRepos" class="card mt-3">
+    <div class="card-header light">
+        <h4>Github Repositories</h4>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li *ngFor="let repo of githubRepos" class="list-group-item d-flex justify-content-between">
+                <a [href]="repo.html_url" class="text-primary font-weight-bold" target="_blank">{{ repo.name }}</a>
+               
+                <span class="badge badge-success">{{ repo.stargezers_count }} Stars</span>
+                <span class="badge badge-warning">{{ repo.watchers_count }} Stars</span>
+            </li>
+        </ul>
+    </div>
+</div>
